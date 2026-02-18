@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHEIN - Online Shopping</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal show">
+  <div class="login-content">
+    <h2>🛍️ Welcome to SHEIN</h2>
+
+    <div id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p>New user? <span onclick="showSignup()">Create Account</span></p>
+    </div>
+
+    <div id="signupForm" style="display:none;">
+      <input type="text" id="signupName" placeholder="Full Name">
+      <input type="email" id="signupEmail" placeholder="Email">
+      <input type="password" id="signupPassword" placeholder="Password">
+      <button onclick="signup()">Sign Up</button>
+      <p>Already have account? <span onclick="showLogin()">Login</span></p>
+    </div>
+  </div>
+</div>
+
+<header>
+  <h1>🛍️ SHEIN</h1>
+  <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+  <button onclick="showWishlist()">❤️ Wishlist</button>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+  <div id="products" class="products"></div>
+
+  <div class="cart">
+    <h2>🛒 My Bag</h2>
+    <ul id="cartItems"></ul>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <button onclick="checkout()">Buy Now</button>
+    <button onclick="clearCart()">Clear</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
